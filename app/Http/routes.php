@@ -25,6 +25,7 @@ Route::controller('admin/login','Admins\LoginController');
 // Start Online Page
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'Admins'],function(){
 	Route::controller('index','BlankController');
+	Route::controller('user','UserController');
 	Route::get('blank',function(){
 		echo 'Get Blank Page';
 	});

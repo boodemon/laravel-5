@@ -1,9 +1,8 @@
 <?php namespace App\Http\Controllers\Admins;
-use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\AdminsController;
 
-class  UserController extends Controller {
-	public function index(){
+class  UserController extends AdminsController {
+	public function getIndex(){
 		return view('admin.user.index');
 	}
 	
