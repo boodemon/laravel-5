@@ -87,18 +87,27 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+						<li>
+                            <a class="active" href="{{url('admin/user')}}">Administrators</a>
+                        </li>
+						<li>
+                            <a class="active" href="{{url('admin/login/logout')}}">Logout</a>
+                        </li>
+
+						<!--
                         <li class="active">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="active" href="blank.html">Blank Page</a>
+                                    <a class="active" href="{{url('admin/user')}}">Administrators</a>
                                 </li>
                                 <li>
                                     <a href="login.html">Login Page</a>
                                 </li>
                             </ul>
-                            <!-- /.nav-second-level -->
+                            <!-- /.nav-second-level - ->
                         </li>
+						-->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
