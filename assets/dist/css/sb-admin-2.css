@@ -26,7 +26,33 @@ body {
         border-left: 1px solid #e7e7e7;
     }
 }
+.bg-red>.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: #FF7373;
+  color:#000 !important;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: #000000;
+  background-color: transparent;
+}
 
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: #FF7373;
+  border-color: #337ab7;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  color: #000000;
+  text-decoration: none;
+  background-color: #FF7373;
+}
+
+.text-muted {
+  color: #000;
+}
 .navbar-top-links {
     margin-right: 0;
 }
@@ -99,7 +125,7 @@ body {
 }
 
 .sidebar ul li a.active {
-    background-color: #eee;
+    background-color: #FF7373; color:#000 !important;
 }
 
 .sidebar .arrow {
@@ -113,6 +139,7 @@ body {
 .sidebar .active>a>.fa.arrow:before {
     content: "\f107";
 }
+.bg-red table a {background:transparent; color:#000;}
 
 .sidebar .nav-second-level li,
 .sidebar .nav-third-level li {
@@ -236,7 +263,7 @@ table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc_disabled {
     background: 0 0;
 }
-
+.table>thead>tr>th{text-align:center;}
 table.dataTable thead .sorting_asc:after {
     content: "\f0de";
     float: right;

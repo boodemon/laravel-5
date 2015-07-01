@@ -1,9 +1,9 @@
-<ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
+<ul class="nav navbar-top-links navbar-right bg-red">
+                <li class="dropdown  bg-red">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-messages">
+                    <ul class="dropdown-menu dropdown-messages bg-red">
                         <li>
                             <a href="#">
                                 <div>
@@ -51,11 +51,11 @@
                 </li>
 
                 <!-- /.dropdown -->
-                <li class="dropdown">
+                <li class="dropdown bg-red"">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-alerts">
+                    <ul class="dropdown-menu dropdown-alerts bg-red"">
                         <li>
                             <a href="#">
                                 <div>
@@ -111,11 +111,11 @@
                     <!-- /.dropdown-alerts -->
                 </li>
                 <!-- /.dropdown -->
-                <li class="dropdown">
+                <li class="dropdown bg-red"">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-user">
+                    <ul class="dropdown-menu dropdown-user bg-red"">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>

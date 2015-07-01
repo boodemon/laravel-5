@@ -11,11 +11,11 @@
 			<div class="panel panel-default">
                 <div class="panel-body">
                     <div class="dataTable_wrapper">
-                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <table class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th></th>
+                                    <th><input type="checkbox" id="checkAll"/></th>
 									<th>Username</th>
                                     <th>Name</th>
                                     <th>E-mail</th>
@@ -24,18 +24,25 @@
                                 </tr>
                             </thead>
                             <tbody>
+							@if($user)
+								@foreach($user as $u)
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td>{{$u->id}}</td>
+									<td><input name="id[]" type="checkbox" id="id" value="{{$u->id}}" class="checkboxAll" /></td>
+									<td>{{$u->username}}</td>
+									<td>{{$u->name}}</td>
+									<td>{{$u->email}}</td>
+									<td>{{$u->tel}}</td>
+									<td class="text-right">
+										<a href="{{url('#')}}" title="" class="edit"><i class="fa fa-edit"></i></a>
+										<a href="{{url('#')}}" title="" class="del"><i class="glyphicon glyphicon-remove"></i></a>
+									</td>
 								</tr>
+								@endforeach
+							@endif
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
-@endsection
+@stop
