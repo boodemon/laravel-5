@@ -16,17 +16,11 @@
 			<form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/user/form') }}">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-				<div class="form-group">
-					<label class="col-md-4 control-label">Name</label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" name="name" value="{{ old('name') }}">
-					</div>
-				</div>
 
 				<div class="form-group">
-					<label class="col-md-4 control-label">E-Mail Address</label>
+					<label class="col-md-4 control-label">Username</label>
 					<div class="col-md-6">
-						<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+						<input type="email" class="form-control" name="username" value="{{ $user ? $user->username : old('username') }}">
 					</div>
 				</div>
 
@@ -45,16 +39,46 @@
 				</div>
 
 				<div class="form-group">
+					<label class="col-md-4 control-label">Name</label>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="name" value="{{ $user ? $user->name : old('name') }}">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label">E-Mail Address</label>
+					<div class="col-md-6">
+						<input type="email" class="form-control" name="email" value="{{ $user ? $user->email : old('email') }}">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-md-4 control-label">Tel</label>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="tel" value="{{ $user ? $user->tel : old('tel') }}">
+					</div>
+				</div>
+				
+				
+				<div class="form-group">
+					<label class="col-md-4 control-label">Active</label>
+					<div class="col-md-6">
+						<input type="checkbox"  name="active" value="Y" {{ $user && $user->active == 'Y' ? 'checked' : ''}}>
+					</div>
+				</div>
+				
+				<div class="form-group">
 					<div class="col-md-6 col-md-offset-4">
-						<button type="submit" class="btn btn-primary">
+						<button type="submit" class="btn btn-danger">
+							<i class="fa fa-save"></i>
 							Register
 						</button>
+						<a href="{{url('admin/user/form')}}" class="btn btn-success">
+							<i class="fa fa-user-md"></i>
+							New User
+						</a>
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
-	
-
-
-@endsection
+@stop

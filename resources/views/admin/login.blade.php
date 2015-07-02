@@ -3,7 +3,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In </h3>
+                        <h3 class="panel-title">Administrator Sign In </h3>
                     </div>
  						@if(Session::has('message'))
 						<div class="panel-body bg-danger color-red">
@@ -30,7 +30,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <button class="btn btn-lg btn-success btn-block">Login</button>
+                                <button class="btn btn-lg btn-danger btn-block">Login</button>
                             </fieldset>
                         </form>
                     </div>

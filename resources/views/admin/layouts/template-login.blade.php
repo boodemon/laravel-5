@@ -19,6 +19,7 @@
 
     <!-- Custom CSS -->
     <link href="{{asset('/assets/dist/css/sb-admin-2.css')}}" rel="stylesheet">
+    <link href="{{asset('/assets/css/admin-login.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{asset('/assets/bower_components/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">

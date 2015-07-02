@@ -38,8 +38,8 @@
 									<td>{{$u->email}}</td>
 									<td>{{$u->tel}}</td>
 									<td class="text-right">
-										<a href="{{url('#')}}" title="" class="edit"><i class="fa fa-edit"></i></a>
-										<a href="{{url('#')}}" title="" class="del"><i class="glyphicon glyphicon-remove"></i></a>
+										<a href="{{url('admin/user/form/'.$u->id)}}" title="" class="edit"><i class="fa fa-edit"></i></a>
+										<a href="{{url('admin/user/delete/.$u->id')}}" title="" class="del"><i class="glyphicon glyphicon-remove"></i></a>
 									</td>
 								</tr>
 								@endforeach

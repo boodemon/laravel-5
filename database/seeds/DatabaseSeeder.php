@@ -27,6 +27,7 @@ class UserTableSeeder extends Seeder {
 		'name' => 'วสันตศิริ คำป้อง',
 		'tel' => '094-4866182',
 		'type' => 'admin',
+		'active' => 'Y',
 		'created_at' => date('Y-m-d H:i:s')
 		]);
 	}
