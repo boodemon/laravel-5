@@ -31,8 +31,11 @@ body {
   background-color: #FF7373;
   color:#000 !important;
 }
+
+#page-wrapper .page-header {margin:10px 0;}
+
 .navbar-default .navbar-brand {
-  color: #fff;
+  color: #000;
 }
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
   color: #000000;

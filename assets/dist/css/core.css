@@ -1,7 +1,3 @@
-@import url(icon.css);
-@import url(icon2.css);
-@import url(icon3.css);
-@import url(icon4.css);
 a.glyphicon{text-decoration:none; margin-right:5px;}
 .font-tahoma{font-family:tahoma;}
 .f10{font-size:10px;}
@@ -175,8 +171,8 @@ a.glyphicon{text-decoration:none; margin-right:5px;}
 .bg-title{background:#4d4d4d; color:#fff; font-size:16px;}
 .bg-no{background:transparent;}
 .bg-yellow{background-color:#f0ad4e;}
-.bg-red{background-color:#f00; color:#000;}
-.bg-red li a{background-color:#f00; color:#fff !important;}
+.bg-red{background-color:#F99A9A; color:#000;}
+.bg-red li a{background-color:#F99A9A; color:#830808 !important;}
 .bg-red table a {background:transparent; color:#000;}
 
 

@@ -10,8 +10,8 @@ class  UserController extends AdminsController {
 	}
 	
 	public function getForm($id = null){
-		
-		return view('admin.user.form');
+		$data = array('id' => $id);
+		return view('admin.user.form',$data);
 	}
 	public function postForm(Request $request){
 		echo 'POST';

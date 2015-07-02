@@ -1,9 +1,13 @@
 @extends('admin.layouts.template')
 
 @section('content')
-	<div class="row">
-		<div class="col-lg-12">
-			<h1 class="page-header">User Managements</h1>
+	<div class="row page-header">
+		<div class="col-sm-6">
+			<h1 class="">User Managements</h1>
+		</div>
+		<div class="col-sm-6 text-right padding-top-20">
+			<a class="btn btn-success" href="{{url('admin/user/form')}}" title="Add new User"><i class="fa fa-plus-square" ></i> New</a>
+			<button class="btn btn-danger del" type="submit" title="Delete Multiple Users"><i class="fa fa-trash-o" ></i> Delete</button>
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
@@ -28,7 +32,7 @@
 								@foreach($user as $u)
 								<tr>
 									<td>{{$u->id}}</td>
-									<td><input name="id[]" type="checkbox" id="id" value="{{$u->id}}" class="checkboxAll" /></td>
+									<td class="text-center"><input name="id[]" type="checkbox" id="id" value="{{$u->id}}" class="checkboxAll" /></td>
 									<td>{{$u->username}}</td>
 									<td>{{$u->name}}</td>
 									<td>{{$u->email}}</td>
