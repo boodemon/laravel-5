@@ -16,11 +16,11 @@
 			<form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/user/form') }}">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-
 				<div class="form-group">
 					<label class="col-md-4 control-label">Username</label>
 					<div class="col-md-6">
 						<input type="email" class="form-control" name="username" value="{{ $user ? $user->username : old('username') }}">
+						{!!$errors->first('username', '<span class="control-label color-red" for="username">*:message</span>')!!}
 					</div>
 				</div>
 
@@ -28,6 +28,7 @@
 					<label class="col-md-4 control-label">Password</label>
 					<div class="col-md-6">
 						<input type="password" class="form-control" name="password">
+						{!!$errors->first('password', '<span class="control-label color-red" for="password">*:message</span>')!!}
 					</div>
 				</div>
 
@@ -35,6 +36,7 @@
 					<label class="col-md-4 control-label">Confirm Password</label>
 					<div class="col-md-6">
 						<input type="password" class="form-control" name="password_confirmation">
+						{!!$errors->first('password_confirmation', '<span class="control-label color-red" for="password_confirmation">*:message</span>')!!}
 					</div>
 				</div>
 
@@ -42,12 +44,14 @@
 					<label class="col-md-4 control-label">Name</label>
 					<div class="col-md-6">
 						<input type="text" class="form-control" name="name" value="{{ $user ? $user->name : old('name') }}">
+						{!!$errors->first('name', '<span class="control-label color-red" for="name">*:message</span>')!!}
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-md-4 control-label">E-Mail Address</label>
 					<div class="col-md-6">
 						<input type="email" class="form-control" name="email" value="{{ $user ? $user->email : old('email') }}">
+						{!!$errors->first('email', '<span class="control-label color-red" for="email">*:message</span>')!!}
 					</div>
 				</div>
 				
@@ -57,7 +61,6 @@
 						<input type="text" class="form-control" name="tel" value="{{ $user ? $user->tel : old('tel') }}">
 					</div>
 				</div>
-				
 				
 				<div class="form-group">
 					<label class="col-md-4 control-label">Active</label>

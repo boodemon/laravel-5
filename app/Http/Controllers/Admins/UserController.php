@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers\Admins;
 use App\Http\Controllers\AdminsController;
 use App\Models\Users;
+use Illuminate\Http\Request;
+use App\Http\Requests\Admins\userRequest;
 
 class  UserController extends AdminsController {
 	public function getIndex(){
@@ -17,9 +19,10 @@ class  UserController extends AdminsController {
 		$data = array('id' => $id,'user' => $user);
 		return view('admin.user.form',$data);
 	}
-	public function postForm(Request $request){
+	
+	public function postForm(userRequest $request){
 		echo 'POST';
-		//echo '<pre>',print($request),'</pre>';
-		echo $request->input('email');
+		echo '<pre>',print($request),'</pre>';
+		//echo $request->input('email');
 	}
 }
