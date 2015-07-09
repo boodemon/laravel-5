@@ -8,3 +8,4 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{asset('/assets/dist/js/sb-admin-2.js')}}"></script>
+<script src="{{asset('/assets/js/admin-core.js')}}"></script>

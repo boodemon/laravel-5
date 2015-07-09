@@ -1,13 +1,15 @@
 @extends('admin.layouts.template')
 
 @section('content')
+<form action="{{url('/admin/user/action')}}" method="post">
+<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<div class="row page-header">
 		<div class="col-sm-6">
 			<h1 class="">User Managements</h1>
 		</div>
 		<div class="col-sm-6 text-right padding-top-20">
 			<a class="btn btn-success" href="{{url('admin/user/form')}}" title="Add new User"><i class="fa fa-plus-square" ></i> New</a>
-			<button class="btn btn-danger del" type="submit" title="Delete Multiple Users"><i class="fa fa-trash-o" ></i> Delete</button>
+			<button class="btn btn-danger del" type="submit" name = "delete" title="Delete Multiple Users"><i class="fa fa-trash-o" ></i> Delete</button>
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
@@ -24,6 +26,7 @@
                                     <th>Name</th>
                                     <th>E-mail</th>
                                     <th>Tel</th>
+                                    <th>Active</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -37,9 +40,10 @@
 									<td>{{$u->name}}</td>
 									<td>{{$u->email}}</td>
 									<td>{{$u->tel}}</td>
+									<td class="text-center"><i class="fa {{$u->active == 'Y' ? 'fa-check-circle color-green ':'fa-times-circle color-red'}}"></i></td>
 									<td class="text-right">
 										<a href="{{url('admin/user/form/'.$u->id)}}" title="" class="edit"><i class="fa fa-edit"></i></a>
-										<a href="{{url('admin/user/delete/.$u->id')}}" title="" class="del"><i class="glyphicon glyphicon-remove"></i></a>
+										<a href="{{url('admin/user/delete/'.$u->id)}}" title="" class="del"><i class="glyphicon glyphicon-remove"></i></a>
 									</td>
 								</tr>
 								@endforeach
@@ -49,4 +53,5 @@
 					</div>
 				</div>
 			</div>
+</form>
 @stop

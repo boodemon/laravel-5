@@ -15,11 +15,12 @@
 		<div class="panel-body">
 			<form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/user/form') }}">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<input type="hidden" name="id" value="{{ $id }}">
 
 				<div class="form-group">
 					<label class="col-md-4 control-label">Username</label>
 					<div class="col-md-6">
-						<input type="email" class="form-control" name="username" value="{{ $user ? $user->username : old('username') }}">
+						<input type="text" class="form-control" name="username" value="{{ $user ? $user->username : old('username') }}">
 						{!!$errors->first('username', '<span class="control-label color-red" for="username">*:message</span>')!!}
 					</div>
 				</div>
@@ -73,7 +74,7 @@
 					<div class="col-md-6 col-md-offset-4">
 						<button type="submit" class="btn btn-danger">
 							<i class="fa fa-save"></i>
-							Register
+							{{$id == 0 ? 'Register':'Update'}}
 						</button>
 						<a href="{{url('admin/user/form')}}" class="btn btn-success">
 							<i class="fa fa-user-md"></i>
