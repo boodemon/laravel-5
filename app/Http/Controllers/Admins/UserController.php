@@ -3,6 +3,7 @@ use App\Http\Controllers\AdminsController;
 use App\Models\Users;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admins\userRequest;
+use Auth;
 
 class  UserController extends AdminsController {
 	public function getIndex(){
@@ -21,7 +22,8 @@ class  UserController extends AdminsController {
 	}
 	
 		
-	public function getProfile($id){
+	public function getProfile(){
+		$id = Auth::user()->id;
 		$user = Users::where('id',$id)->first();
 		if(!$user) return redirect('admin/user/index');
 		$data = array('id' => $id,'user' => $user);

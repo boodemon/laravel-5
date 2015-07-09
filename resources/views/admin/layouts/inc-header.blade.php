@@ -116,7 +116,7 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user bg-red"">
-                        <li><a href="{{url('admin/user/profile/' . Auth::user()->id)}}"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="{{url('admin/user/profile/')}}"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="{{url('admin/user/index')}}"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
