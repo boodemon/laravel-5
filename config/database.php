@@ -59,7 +59,7 @@ return [
 			'username'  => 'root',//env('DB_USERNAME', 'admin'),
 			'password'  => '1125',//env('DB_PASSWORD', 'sm4422040025'),
 			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
+			'collation' => 'utf8_general_ci',//'utf8_unicode_ci',
 			'prefix'    => '',
 			'strict'    => false,
 		],

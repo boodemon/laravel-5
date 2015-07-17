@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -18,7 +17,6 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-
 */
 // Offline Login Page
 Route::controller('admin/login','Admins\LoginController');
@@ -27,6 +25,7 @@ Route::controller('admin/login','Admins\LoginController');
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'Admins'],function(){
 	Route::controller('index','BlankController');
 	Route::controller('user','UserController');
+	Route::controller('upload','UploadController');
 	
 	Route::get('blank',function(){
 		echo 'Get Blank Page';
