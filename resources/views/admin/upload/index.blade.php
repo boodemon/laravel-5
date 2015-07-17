@@ -24,7 +24,7 @@
 				<div class="row">
 				@if($images)
 					@foreach($images as $img)
-					<div class="col-xs-4 gallery">
+					<div class="col-xs-3 gallery">
 						<img src="{{asset('images/uploads/'.$img->image_name)}}" />
 					</div>
 					@endforeach
