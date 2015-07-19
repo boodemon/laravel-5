@@ -2,6 +2,7 @@
 use App\Http\Controllers\AdminsController;
 use Illuminate\Http\Request;
 use App\Models\Images;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class UploadController extends AdminsController{
 	public function getIndex(){
@@ -23,5 +24,8 @@ class UploadController extends AdminsController{
 		}
 		return redirect()->back();
 	}
-	
+	public function getTestpackage(){
+		$img = Image::make('images/uploads/Koala.jpg')->resize(300, 200);
+		return $img->response('jpg');
+	}
 }
