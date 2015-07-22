@@ -1,4 +1,4 @@
- <script src="{{asset('/assets/bower_components/jquery/dist/jquery.min.js')}}"></script>
+ <script src="{{asset('/assets/js/jquery-1.11.3.min.js')}}"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('/assets/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>

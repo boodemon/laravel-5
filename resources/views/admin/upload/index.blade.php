@@ -11,7 +11,7 @@
 		<div class="col-sm-12">
 			<h1 class="">Basic Uploader</h1>
 		</div>
-		<div class="col-sm-6 text-right padding-top-20 multiupload">
+		<div class="col-sm-6 text-right padding-top-20 multiupload" id="gallery">
 			<ul id="preview" class="preview">
 			</ul>
 		</div>
@@ -41,7 +41,5 @@
 @stop
 @section('scripts')
 	<script type="text/javascript" src="{{asset('/assets/lib/plupload/js/plupload.full.min.js')}}"></script>
-	<script type="text/javascript" src="{{asset('/assets/lib/plupload/js/jquery.plupload.queue/jquery.plupload.queue.min.js') }}"></script>
-	<script type="text/javascript" src="{{asset('/assets/lib/plupload/js/jquery.ui.plupload/jquery.ui.plupload.js') }}"></script>
 	<script type="text/javascript" src="{{asset('/assets/js/admin-uploader.js') }}"></script>
 @stop
