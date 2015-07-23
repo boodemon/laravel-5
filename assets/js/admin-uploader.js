@@ -1,6 +1,6 @@
 var uploader = new plupload.Uploader({
 	runtimes : 'html5,flash,silverlight,html4',
-	browse_button : 'btn-select', // you can pass an id...
+	browse_button : 'pickfiles', // you can pass an id...
 	container: document.getElementById('container'), // ... or DOM Element itself
 	url : 'upload.php',
 	flash_swf_url : '/assets/lib/plupload/js/Moxie.swf',
