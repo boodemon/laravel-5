@@ -37,7 +37,11 @@ var uploader = new plupload.Uploader({
 			document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
 		},
 		UploadComplete: function(up, files) {
+			display();
+			$('#gallery .preview').html('');
+			/*
 			window.location.reload(true);
+			*/
 			console.log('Upload Complete');
 		}
 	},
@@ -46,7 +50,7 @@ var uploader = new plupload.Uploader({
 	},
 	
 });
-preview = {	
+var preview = {	
 	showImagePreview   : function( file , id) {
 		var item = $( '<li id="thumbs-'+ id + '"><b></b><a href="'+ id +'" class="color-red del-preview glyphicon glyphicon-off"></a></li>' ).prependTo( '#gallery .preview' );
 		var image = $( new Image() ).appendTo(item);
@@ -66,4 +70,14 @@ preview = {
 		});
 	}
 }
+
+var display = function(){
+	$('.image-view').html('Loading...');
+	$.ajax({url : base_path + '/admin/upload/preview',
+			success : function(data){
+				$('.image-view').html(data);
+			}
+	});
+}
+display();
 uploader.init();

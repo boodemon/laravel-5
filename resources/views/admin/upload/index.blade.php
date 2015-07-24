@@ -23,14 +23,8 @@
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<div class="dataTable_wrapper">
-				<div class="row">
-				@if($images)
-					@foreach($images as $img)
-					<div class="col-xs-2 gallery">
-						<img src="{{asset('images/uploads/'.$img->image_name)}}" />
-					</div>
-					@endforeach
-				@endif
+				<div class="row image-view">
+				
 				</div>
 				
 			</div>

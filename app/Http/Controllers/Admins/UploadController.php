@@ -10,6 +10,12 @@ class UploadController extends AdminsController{
 		return view('admin.upload.index',['images' => $images]);
 	}
 	
+	public function getPreview(){
+		$images = Images::orderBy('id','desc')->get();
+		return view('admin.upload.preview',['images' => $images]);
+
+	}
+	
 	public function postAction(Request $request){
 		if($request->exists('btn-multiupload')){
 			echo '<pre>',print_r($request->file('file')),'</pre>';
