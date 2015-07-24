@@ -1,3 +1,25 @@
+var preview = {
+	    showImagePreview   : function( file , id) {
+		var item = $( '<li id="thumbs-'+ id + '"><a href="'+ id +'" class="color-red del-preview glyphicon glyphicon-off"></a></li>' ).prependTo( gallery.upload_preview );
+		var image = $( new Image() ).appendTo(item);
+		var preloader = new mOxie.Image();
+		preloader.onload = function() {
+			preloader.downsize( 100, 100 );
+			image.prop({ "src": preloader.getAsDataURL(),'id':id,'class':'img-preview'} );
+		};
+		preloader.load( file.getSource() );
+	},
+			
+	removeImagePreview	:	function (){
+		$('.del-preview').on('click',function(e){
+			e.preventDefault();
+			var thumb  = $('#thumbs-' + $(this).attr('href'));
+			thumb.remove();
+		});
+	},
+
+}
+
 var gallery = {
 	contain_id 		: 'gallery',
 	upload_url 		: '',
@@ -21,30 +43,10 @@ var gallery = {
 	},
 	
     handlePluploadFilesAdded : function ( uploader, files ) {
-		console.log( "Files selected." );
 		for ( var i = 0 ; i < files.length ; i++ ) {
-			//this.showImagePreview( files[ i ] ,'img-'+i);
-			console.log('I:' + i);
+			preview.showImagePreview( files[ i ] ,'img-'+i);
 		}
-		this.removeImagePreview();
-    },
+		preview.removeImagePreview();
+    }
 			
-    showImagePreview   : function( file , id) {
-		var item = $( '<li id="thumbs-'+ id + '"><a href="'+ id +'" class="color-red del-preview glyphicon glyphicon-off"></a></li>' ).prependTo( this.upload_preview );
-		var image = $( new Image() ).appendTo(item);
-		var preloader = new mOxie.Image();
-		preloader.onload = function() {
-			preloader.downsize( 100, 100 );
-			image.prop({ "src": preloader.getAsDataURL(),'id':id,'class':'img-preview'} );
-		};
-		preloader.load( file.getSource() );
-	},
-			
-	removeImagePreview	:	function (){
-		$('.del-preview').on('click',function(e){
-			e.preventDefault();
-			var thumb  = $('#thumbs-' + $(this).attr('href'));
-			thumb.remove();
-		});
-	}
-};
+};	

@@ -1,2 +1,6 @@
-.gallery {margin-bottom:10px;}
+.gallery {margin-bottom:10px; overflow:hidden; height:100px;}
 .gallery img{width:100%;}
+ul.preview{list-style:none;}
+ul.preview>li{display:inline; position:relative; margin:4px; height:100px; width:100px; overflow:hidden; float:left;}
+ul.preview>li>img{height:100%;}
+ul.preview>li>a.del-preview{  position: absolute;  right: 0;  top: 80px;  display: block;  height: 16px;  width: 16px;  text-align: center;}
